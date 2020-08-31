@@ -237,20 +237,56 @@
                                     <div class="col-12">
                                         <h5 class="juridical-label">Tìm kiếm tài liệu</h5>
                                         <form action="#" method="POST" class="juridical-form">
-                                            <select id="inputState" class="juridical-form-control">
-                                                <option>Choose...</option>
-                                                <option>...</option>
-                                            </select>
-                                            <select id="inputState" class="juridical-form-control">
-                                                <option>Choose...</option>
-                                                <option>...</option>
-                                            </select>
-                                            <select id="inputState" class="juridical-form-control">
-                                                <option>Choose...</option>
-                                                <option>...</option>
-                                            </select>
-                                            <a type="submit" href="#" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i>Tìm kiếm</a>
+                                            <div class="input-container">
+                                                <select id="sokyhieu" name="sokyhieu" class="juridical-form-control"
+                                                    placeholder="Số/Ký hiệu">
+                                                    <option value="">DT-NT2020</option>
+                                                    <option value="">DT-NT2019</option>
+                                                </select>
+                                                <select id="ngaybanhanh" name="ngaybanhanh"
+                                                    class="juridical-form-control" placeholder="Ngày ban hành">
+                                                    <option value="">01/01/2020</option>
+                                                    <option value="">02/01/2020</option>
+                                                    <option value="">03/01/2020</option>
+                                                </select>
+                                                <input id="tentailieu" name="tentailieu" type="text"
+                                                    class="juridical-form-control w-150"
+                                                    placeholder="Nhập tên tài liệu cần tìm kiếm">
+                                            </div>
+                                            <a type="submit" href="#" class="btn btn-primary"><i class="fa fa-search"
+                                                    aria-hidden="true"></i>Tìm kiếm</a>
                                         </form>
+                                        <h5 class="juridical-label">Danh sách các tài liệu</h5>
+                                        <table class="table juridical-table">
+                                            <thead class="thead-primary">
+                                                <tr>
+                                                    <th scope="col">Số/Ký hiệu</th>
+                                                    <th scope="col">Ngày cập nhật</th>
+                                                    <th scope="col">Tên tài liệu</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="row">989/TB-UBDT</td>
+                                                    <td>11/08/2020</td>
+                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020</td>
+                                                    <td>
+                                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">989/TB-UBDT</td>
+                                                    <td>11/08/2020</td>
+                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020</td>
+                                                    <td>
+                                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +297,64 @@
                                             class="fa fa-angle-double-right ml-1 font-12" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="section-body row">
-
+                                    <div class="col-12">
+                                        <div class="owl-carousel owl-theme catalog-carousel">
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata1.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Đơn vị hành chính</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata2.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Các dân tộc Việt Nam</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata3.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Ngành kinh tế</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata1.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Đơn vị hành chính</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata2.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Các dân tộc Việt Nam</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata3.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Ngành kinh tế</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata1.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Đơn vị hành chính</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata2.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Các dân tộc Việt Nam</h6>
+                                            </div>
+                                            <div class="item">
+                                                <div class="img-container">
+                                                    <img src="./assets/img/cata3.png" alt="Catalog Image">
+                                                </div>
+                                                <h6>Ngành kinh tế</h6>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

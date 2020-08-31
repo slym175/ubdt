@@ -72,6 +72,14 @@ main {
 .font-12 {
     font-size: 12px;
 }
+
+.w-125 {
+    width: 125% !important;
+}
+
+.w-150 {
+    width: 150% !important;
+}
 /* header */
 .header {
     background: linear-gradient(270deg, #106D9E 0%, #FFFFFF 100%);
@@ -528,6 +536,7 @@ main {
 .section-body .juridical-label {
     font: normal bold 16px/18px Arial;
     color: #343434;
+    margin-bottom: 6px;
 }
 .news .newest-news.newest-news_block {
     margin-bottom: .5rem;
@@ -609,23 +618,37 @@ main {
     color: #343434;
 }
 
-.juridical-form{
+.juridical-form {
     display: flex;
     border: 1px solid #DFDCDC;
+    margin-bottom: 14px;
 }
 
-.juridical-form .juridical-form-control{
+.juridical-form .input-container {
+    padding: 4px 0;
+    display: flex;
+    width: 100%;
+}
+
+.juridical-form .juridical-form-control {
     border-radius: unset;
     border: unset;
     outline: none;
     width: 100%;
     border-right: 1px solid #DFDCDC;
+    font: normal normal 14px/16px Arial;
 }
 
-.juridical-form .juridical-form-control:focus{
-    border-radius: unset;
-    border: unset;
-    outline: none;
+.juridical-form .juridical-form-control:last-child {
+    border-right: unset;
+}
+
+.juridical-form .juridical-form-control::placeholder,
+.juridical-form .juridical-form-control::-moz-placeholder,
+.juridical-form .juridical-form-control::-webkit-input-placeholder,
+.juridical-form .juridical-form-control option.placeholder {
+    color: #A7A9AC;
+    font: normal normal 14px/16px Arial;
 }
 
 .juridical-form a[type="submit"] {
@@ -633,8 +656,47 @@ main {
     border-radius: 0;
     justify-content: center;
     align-items: center;
+    font: normal normal 14px/16px Arial;
+    color: #fff;
+    padding: .563rem .75rem;
+    white-space: nowrap;
 }
 
+.juridical-form .input-container .select2 {
+    width: 100% !important;
+    outline: none;
+}
+
+.juridical-form .input-container .select2 .select2-selection {
+    border: unset;
+    border-right: 1px solid #A7A9AC;
+    border-radius: unset;
+    outline: none;
+}
+
+.juridical-form .input-container input.juridical-form-control {
+    padding-left: 5px;
+}
+
+.juridical-form a[type="submit"] i{
+    font-size: 12px;
+    margin-right: .5rem;
+}
+
+.select2-dropdown {
+    margin-top: 12px;
+    border-top: 1px solid #C4C4C4 !important;
+    border-radius: unset;
+    border: 1px solid #C4C4C4 !important;
+    outline: none;
+}
+
+.select2-results {
+    display: block;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
 .section-header-secondary {
     display: flex;
@@ -656,6 +718,59 @@ main {
     margin-bottom: 1rem;
     background-color: #fff;
 }
+
+.table .thead-primary {
+    background: #007CBD;
+}
+
+.table th {
+    font: normal bold 14px/16px Arial;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    border-top: unset;
+}
+
+.table td {
+    font: normal normal 14px/16px Arial;
+    color: #343434;
+    border-top: unset;
+}
+
+.juridical-table tr {
+    border-top: 1px solid #E5E5E5;
+}
+
+.juridical-table td:first-child {
+    font: normal normal 14px/16px Arial;
+    color: #343434;
+    white-space: nowrap;
+}
+
+.catalog-carousel .item .img-container {
+    max-height: 156px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.catalog-carousel .item .img-container img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.catalog-carousel .item h6 {
+    font: normal normal 14px/16px Arial;
+    margin: 12px 0;
+    text-align: center;
+    color: #343434;
+}
+
+
+
 
 .noti-content, .link-content, .ac-content {
     display: flex;
