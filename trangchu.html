@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/select2/select2.min.css">
+    <link rel="stylesheet" href="./assets/chartjs/chartjs.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -46,9 +47,9 @@
                             <ul id="navigation">
                                 <li><a href="trangchu.html"><i class="fas fa-home"></i></a></li>
                                 <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
-                                <li><a href="cosodulieu.html">CƠ SỞ DỮ LIỆU THỐNG KÊ</a></li>
+                                <li><a href="cosodulieuthongke.html">CƠ SỞ DỮ LIỆU THỐNG KÊ</a></li>
                                 <li><a href="tintuc.html">TIN TỨC</a></li>
-                                <li><a href="anphamthongke.html">ÁN PHẨM THỐNG KÊ</a></li>
+                                <li><a href="anphamthongke.html">ẤN PHẨM THỐNG KÊ</a></li>
                                 <li>
                                     <a href="#">DANH MỤC <i class="fas fa-chevron-down ml-2"></i></a>
                                     <ul class="submenu">
@@ -79,7 +80,7 @@
                                 <div class="item-title">
                                     <h5>Ngày hội Văn hóa - Thể thao và Du lịch các dân tộc vùng Tây Bắc lần thứ XIV năm
                                         2019 sẽ được tổ chức từ ngày 18-20/8 tại thành phố Sơn La.</h5>
-                                    <h6><i class="fas fa-calendar-check mr-3"></i> 25 - 03 - 2020</h6>
+                                    <h6><i class="icons-calendar"></i> 25 - 03 - 2020</h6>
                                 </div>
                             </a>
                             <a href="#" class="item"
@@ -88,7 +89,7 @@
                                 <div class="item-title">
                                     <h5>Ngày hội Văn hóa - Thể thao và Du lịch các dân tộc vùng Tây Bắc lần thứ XIV năm
                                         2019 sẽ được tổ chức từ ngày 18-20/8 tại thành phố Sơn La.</h5>
-                                    <h6><i class="fas fa-calendar-check mr-3"></i> 25 - 03 - 2020</h6>
+                                    <h6><i class="icons-calendar"></i> 25 - 03 - 2020</h6>
                                 </div>
                             </a>
                             <a href="#" class="item"
@@ -97,7 +98,7 @@
                                 <div class="item-title">
                                     <h5>Ngày hội Văn hóa - Thể thao và Du lịch các dân tộc vùng Tây Bắc lần thứ XIV năm
                                         2019 sẽ được tổ chức từ ngày 18-20/8 tại thành phố Sơn La.</h5>
-                                    <h6><i class="fas fa-calendar-check mr-3"></i> 25 - 03 - 2020</h6>
+                                    <h6><i class="icons-calendar"></i> 25 - 03 - 2020</h6>
                                 </div>
                             </a>
                             <a href="#" class="item"
@@ -106,7 +107,7 @@
                                 <div class="item-title">
                                     <h5>Ngày hội Văn hóa - Thể thao và Du lịch các dân tộc vùng Tây Bắc lần thứ XIV năm
                                         2019 sẽ được tổ chức từ ngày 18-20/8 tại thành phố Sơn La.</h5>
-                                    <h6><i class="fas fa-calendar-check mr-3"></i> 25 - 03 - 2020</h6>
+                                    <h6><i class="icons-calendar"></i> 25 - 03 - 2020</h6>
                                 </div>
                             </a>
                         </div>
@@ -134,8 +135,8 @@
         <section class="main-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 pl-lg-0">
-                        <div class="bg-white p-15">
+                    <div class="col-lg-9 pl-lg-0 pr-lg-3 px-0">
+                        <div class="bg-white p-15 mb-3">
                             <div class="statistical">
                                 <div class="section-header">
                                     <h4 class="section-title">CƠ SỞ DỮ LIỆU THỐNG KÊ</h4>
@@ -143,9 +144,255 @@
                                             class="fa fa-angle-double-right ml-1 font-12" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="section-body row">
-
+                                    <div class="col-12">
+                                        <ul class="nav nav-tabs nav-justified" id="statisticalTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="so-lieu-thong-ke-tab" data-toggle="tab"
+                                                    href="#so-lieu-thong-ke" role="tab" aria-controls="so-lieu-thong-ke"
+                                                    aria-selected="true">Số liệu thống kê</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="bao-cao-chuyen-de-tab" data-toggle="tab"
+                                                    href="#bao-cao-chuyen-de" role="tab"
+                                                    aria-controls="bao-cao-chuyen-de" aria-selected="false">Báo cáo
+                                                    chuyên đề</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="so-lieu-chuyen-de-tab" data-toggle="tab"
+                                                    href="#so-lieu-chuyen-de" role="tab"
+                                                    aria-controls="so-lieu-chuyen-de" aria-selected="false">Số liệu
+                                                    chuyên đề</a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="phan-tich-danh-gia-tab" data-toggle="tab"
+                                                    href="#phan-tich-danh-gia" role="tab"
+                                                    aria-controls="phan-tich-danh-gia" aria-selected="false">Phân tích
+                                                    đánh giá</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="statisticalTabContent">
+                                            <div class="tab-pane fade show active" id="so-lieu-thong-ke" role="tabpanel"
+                                                aria-labelledby="so-lieu-thong-ke-tab">
+                                                <div class="owl-carousel owl-theme statistical-carousel">
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Tổng điều tra số lượng doanh nghiệp do người dân tộc thiểu
+                                                            số thành lập</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Số liệu khảo sát thực trạng dân tộc thiểu số di cư năm 2019
+                                                        </h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="bao-cao-chuyen-de" role="tabpanel"
+                                                aria-labelledby="bao-cao-chuyen-de-tab">
+                                                <div class="owl-carousel owl-theme statistical-carousel">
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Tổng điều tra số lượng doanh nghiệp do người dân tộc thiểu
+                                                            số thành lập</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Số liệu khảo sát thực trạng dân tộc thiểu số di cư năm 2019
+                                                        </h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="so-lieu-chuyen-de" role="tabpanel"
+                                                aria-labelledby="so-lieu-chuyen-de-tab">
+                                                <div class="owl-carousel owl-theme statistical-carousel">
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Tổng điều tra số lượng doanh nghiệp do người dân tộc thiểu
+                                                            số thành lập</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Số liệu khảo sát thực trạng dân tộc thiểu số di cư năm 2019
+                                                        </h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="phan-tich-danh-gia" role="tabpanel"
+                                                aria-labelledby="phan-tich-danh-gia-tab">
+                                                <div class="owl-carousel owl-theme statistical-carousel">
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Tổng điều tra số lượng doanh nghiệp do người dân tộc thiểu
+                                                            số thành lập</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta2.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Số liệu khảo sát thực trạng dân tộc thiểu số di cư năm 2019
+                                                        </h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/sta3.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="img-container">
+                                                            <img src="./assets/img/cata1.png" alt="Catalog Image">
+                                                        </div>
+                                                        <h6>Điều tra thực trạng tình hình kinh tế xã hội 53 dân tộc
+                                                            thiểu số năm 2019</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="bg-white p-15 mb-3">
                             <div class="news">
                                 <div class="section-header">
                                     <h4 class="section-title">Tin tức</h4>
@@ -153,72 +400,72 @@
                                             class="fa fa-angle-double-right ml-1 font-12" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="section-body row">
-                                    <div class="col-6 newest-news newest-news_block">
+                                    <div class="col-sm-6 newest-news newest-news_block">
                                         <a href="#">
                                             <img src="./assets/img/n1.png" alt="News Image">
                                             <h4>Thông báo về việc cài ứng dụng Bluezone để cảnh báo người nhiễm COVID-19
                                             </h4>
                                         </a>
-                                        <p><i class="fas fa-calendar-check mr-3"></i> 25 - 03 - 2020</p>
+                                        <p><i class="icons-calendar_black"></i> 25 - 03 - 2020</p>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_block">
+                                    <div class="col-sm-6 newest-news newest-news_block">
                                         <a href="#">
                                             <img src="./assets/img/n2.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
-                                        <p><i class="fas fa-calendar-check mr-3"></i> 25 - 03 - 2020</p>
+                                        <p><i class="icons-calendar_black"></i> 25 - 03 - 2020</p>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n3.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n4.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n5.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n6.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n7.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n8.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n9.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
                                                 tác dân tộc</h4>
                                         </a>
                                     </div>
-                                    <div class="col-6 newest-news newest-news_flex">
+                                    <div class="col-sm-6 newest-news newest-news_flex">
                                         <a href="#">
                                             <img src="./assets/img/n10.png" alt="News Image">
                                             <h4>Chuyến thăm cấp cao đánh dấu 12 năm hợp tác đặc biệt Việt - Lào về công
@@ -236,7 +483,7 @@
                                 <div class="section-body row">
                                     <div class="col-12">
                                         <h5 class="juridical-label">Tìm kiếm tài liệu</h5>
-                                        <form action="#" method="POST" class="juridical-form">
+                                        <form action="#" method="POST" class="juridical-form" id="">
                                             <div class="input-container">
                                                 <select id="sokyhieu" name="sokyhieu" class="juridical-form-control"
                                                     placeholder="Số/Ký hiệu">
@@ -253,8 +500,8 @@
                                                     class="juridical-form-control w-150"
                                                     placeholder="Nhập tên tài liệu cần tìm kiếm">
                                             </div>
-                                            <a type="submit" href="#" class="btn btn-primary"><i class="fa fa-search"
-                                                    aria-hidden="true"></i>Tìm kiếm</a>
+                                            <a type="submit" href="#" class="btn btn-primary"><i
+                                                    class="icons-search"></i>Tìm kiếm</a>
                                         </form>
                                         <h5 class="juridical-label">Danh sách các tài liệu</h5>
                                         <table class="table juridical-table">
@@ -270,19 +517,57 @@
                                                 <tr>
                                                     <td scope="row">989/TB-UBDT</td>
                                                     <td>11/08/2020</td>
-                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020</td>
-                                                    <td>
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội
+                                                        ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020
+                                                    </td>
+                                                    <td class="d-flex">
+                                                        <a href="#" class="icons-search"></a>
+                                                        <a href="#" class="icons-download"></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td scope="row">989/TB-UBDT</td>
                                                     <td>11/08/2020</td>
-                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020</td>
-                                                    <td>
-                                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội
+                                                        ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020
+                                                    </td>
+                                                    <td class="d-flex">
+                                                        <a href="#" class="icons-search"></a>
+                                                        <a href="#" class="icons-download"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">989/TB-UBDT</td>
+                                                    <td>11/08/2020</td>
+                                                    <td>Thông báo Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc
+                                                        họpvề việc tổ chức tuyên dương học sinh, sinh viên và thanh niên
+                                                        dân tộc thiểu số xuất sắc, tiêu biểu năm 2020 - lần thứ VIII
+                                                    </td>
+                                                    <td class="d-flex">
+                                                        <a href="#" class="icons-search"></a>
+                                                        <a href="#" class="icons-download"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">989/TB-UBDT</td>
+                                                    <td>11/08/2020</td>
+                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội
+                                                        ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020
+                                                    </td>
+                                                    <td class="d-flex">
+                                                        <a href="#" class="icons-search"></a>
+                                                        <a href="#" class="icons-download"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">989/TB-UBDT</td>
+                                                    <td>11/08/2020</td>
+                                                    <td>Thông báo: Kết luận của Bộ trưởng, Chủ nhiệm Ủy ban tại cuộc hội
+                                                        ý Lãnh đạo Ủy ban tuần 32 và nhiệm vụ trọng tâm tuần 33 năm 2020
+                                                    </td>
+                                                    <td class="d-flex">
+                                                        <a href="#" class="icons-search"></a>
+                                                        <a href="#" class="icons-download"></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -359,8 +644,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 px-lg-0">
-                        <section class="notification">
+                    <div class="col-lg-3 px-0 right">
+                        <section class="notification col-lg-12 col-md-6">
                             <div class="section-header-secondary">
                                 <img src="./assets/img/ic1.png" alt="Head Section Icon">
                                 <h4>CHỈ ĐẠO - ĐIỀU HÀNH</h4>
@@ -395,7 +680,7 @@
                                         class="fa fa-angle-double-right ml-1 font-10" aria-hidden="true"></i></a>
                             </div>
                         </section>
-                        <section class="all-link">
+                        <section class="all-link col-lg-12 col-md-6">
                             <div class="section-header-secondary">
                                 <img src="./assets/img/ic3.png" alt="Head Section Icon">
                                 <h4>LIÊN KẾT</h4>
@@ -423,7 +708,7 @@
                                 </a>
                             </div>
                         </section>
-                        <section class="access-times">
+                        <section class="access-times col-lg-12 col-sm-6">
                             <div class="section-header-secondary">
                                 <img src="./assets/img/ic4.png" alt="Head Section Icon">
                                 <h4>Thông kê truy cập</h4>
@@ -449,14 +734,16 @@
                                 </div>
                             </div>
                         </section>
-                        <div class="right-banner">
-                            <img src="./assets/img/bn1.png" alt="Right Banner">
-                        </div>
-                        <div class="right-banner">
-                            <img src="./assets/img/bn2.png" alt="Right Banner">
-                        </div>
-                        <div class="right-banner">
-                            <img src="./assets/img/bn3.png" alt="Right Banner">
+                        <div class="banner col-lg-12 col-sm-6">
+                            <div class="right-banner">
+                                <img src="./assets/img/bn1.png" alt="Right Banner">
+                            </div>
+                            <div class="right-banner">
+                                <img src="./assets/img/bn2.png" alt="Right Banner">
+                            </div>
+                            <div class="right-banner">
+                                <img src="./assets/img/bn3.png" alt="Right Banner">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -496,6 +783,7 @@
     <script src="./assets/fancybox/jquery.fancybox.min.js"></script>
     <script src="./assets/OwlCarousel/owl.carousel.min.js"></script>
     <script src="./assets/select2/select2.min.js"></script>
+    <script src="./assets/chartjs/chartjs.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 
