@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/select2/select2.min.css">
-    <link rel="stylesheet" href="./assets/chartjs/chartjs.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -24,11 +23,14 @@
                 <div class="row">
                     <div class="col-12 bg">
                         <div class="id-logo">
-                            <a href="trangchu.html" class="logo"><img src="./assets/img/logo.png" alt="UBDT Logo"></a>
-                            <div class="id-title">
-                                <h6>CƠ SỞ DỮ LIỆU VĂN BẢN CHÍNH SÁCH</h6>
-                                <h1>ỦY BAN DÂN TỘC</h1>
-                            </div>
+                            <a href="trangchu.html" class="logo d-flex justify-content-center align-items-center">
+                                <img src="./assets/img/logo.png" alt="UBDT Logo">
+                                <div class="id-title ml-3">
+                                    <h6>CƠ SỞ DỮ LIỆU VĂN BẢN CHÍNH SÁCH</h6>
+                                    <h1>ỦY BAN DÂN TỘC</h1>
+                                </div>
+                            </a>
+                            
                             <div class="id-menu-icon">
                                 <div class="bar"></div>
                                 <div class="bar"></div>
@@ -74,7 +76,7 @@
         <section class="main-section">
             <div class="container">
                 <div class="row main-statistical">
-                    <div class="col-lg-9 pl-lg-0 pr-lg-3 px-0">
+                    <div class="col-lg-9 col-12 pl-lg-0 pr-lg-3 px-0">
                         <div class="bg-white p-15 mb-3 mb-md-50">
                             <nav aria-label="breadcrumb" class="main-breadcrumb">
                                 <ol class="breadcrumb">
@@ -114,8 +116,12 @@
                                                 class="icons-search"></i>Tìm kiếm</a>
                                     </form>
                                     <div class="chart-section">
-                                        <canvas class="app-chart" id="app-chart"></canvas>
-
+                                        <div class="app-chart">
+                                            <img src="./assets/img/chart.png" alt="Chart Image">
+                                            <h6 class="chart-title">
+                                                Diện tích Hà Nội năm 2019
+                                            </h6>
+                                        </div>
                                         <div class="chart-note">
                                             <em class="chart-note-title">Chú thích (*)</em>
                                             <em>- Nguồn: Tổng cục thống kê</em>
@@ -126,8 +132,8 @@
                             </section>
                         </div>
                     </div>
-                    <div class="col-lg-3 px-0 right">
-                        <section class="app-sidebar col-lg-12 col-md-6">
+                    <div class="col-lg-3 col-12 px-0 right">
+                        <section class="app-sidebar">
                             <div class="sidebar-item">
                                 <a class="sidebar-header opened" href="#" data-toggle="collapse"
                                     data-target="#collapseSLTK" aria-expanded="true" aria-controls="collapseSLTK">
@@ -263,37 +269,6 @@
     <script src="./assets/fancybox/jquery.fancybox.min.js"></script>
     <script src="./assets/OwlCarousel/owl.carousel.min.js"></script>
     <script src="./assets/select2/select2.min.js"></script>
-    <script src="./assets/chartjs/chartjs.min.js"></script>
-
-    <script>
-        var ctx = document.getElementById('app-chart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['2019'],
-                datasets: [{
-                    label: 'Diện tích Hà Nội năm 2019',
-                    data: [2397],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-    </script>
     <script src="./assets/js/main.js"></script>
 </body>
 
