@@ -16,6 +16,18 @@ $(document).ready(function () {
         }
     })
 
+    $('.news-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        dots: false,
+        autoHeight: true,
+        items: 1,
+        responsive:{
+            
+        }
+    })
+
     $('select.juridical-form-control#sokyhieu').select2({
         minimumResultsForSearch: Infinity,
         placeholder: "Số/Ký hiệu",
@@ -81,4 +93,15 @@ $(document).ready(function () {
             }
         }
     })
+
+    $(".fancybox")
+    .attr('rel', 'gallery')
+    .fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+        nextEffect  : 'none',
+        prevEffect  : 'none',
+        padding     : 0,
+        margin      : [20, 60, 20, 60] // Increase left/right margin
+    });
 });
